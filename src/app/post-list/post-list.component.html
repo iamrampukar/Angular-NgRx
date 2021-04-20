@@ -7,15 +7,20 @@
                     <th>Id</th>
                     <th>Title</th>
                     <th>Description</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let item of postData">
+                <tr *ngFor="let item of postData; let indx = index">
                     <td>{{ item.id }}</td>
                     <td>{{ item.title }}</td>
                     <td>{{ item.description }}</td>
+                    <td><button class="btn btn-primary btn-sm" (click)="onEditPost(indx)">Edit</button></td>
                 </tr>
             </tbody>
         </table>
+        <pre>
+            {{ postData | json }}
+        </pre>
     </div>
 </div>

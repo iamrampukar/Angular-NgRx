@@ -3,6 +3,7 @@ import { Store } from '@ngrx/store';
 import { changeChannelName, inputValue } from '../states/counter.action';
 import { getChannelName } from '../states/counter.selector';
 import { counterState } from '../states/counter.state';
+import { AppState } from '../store/app.state';
 
 @Component({
   selector: 'app-counter-input',
@@ -13,7 +14,7 @@ export class CounterInputComponent implements OnInit {
   public addValue: any = ''
   public channelName: any;
 
-  constructor(private _store: Store<{ counterX: counterState }>) { }
+  constructor(private _store: Store<AppState>) { }
 
   ngOnInit(): void {
     const self = this;

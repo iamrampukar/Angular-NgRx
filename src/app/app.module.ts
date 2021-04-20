@@ -11,6 +11,9 @@ import { CounterButtonComponent } from './counter-button/counter-button.componen
 import { counterReducer } from './states/counter.reducer';
 import { CounterInputComponent } from './counter-input/counter-input.component';
 import { countReducer } from './count/states/count.reducer';
+import { HomeComponent } from './home/home.component';
+import { PostListComponent } from './post-list/post-list.component';
+import { appReducer } from './store/app.state';
 
 @NgModule({
   declarations: [
@@ -18,6 +21,8 @@ import { countReducer } from './count/states/count.reducer';
     CounterOutputComponent,
     CounterButtonComponent,
     CounterInputComponent,
+    HomeComponent,
+    PostListComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,7 +30,8 @@ import { countReducer } from './count/states/count.reducer';
     FormsModule,
     ReactiveFormsModule,
     NgxBootstrapModule,
-    StoreModule.forRoot({ counterX: counterReducer, counting: countReducer })
+    StoreModule.forRoot(appReducer)
+    // StoreModule.forRoot({ counterX: counterReducer, counting: countReducer })
     // StoreModule.forRoot({ count: countReducer })
   ],
   providers: [],

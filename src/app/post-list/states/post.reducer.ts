@@ -6,7 +6,7 @@ import { initialState } from "./post.state";
 const _postReducer = createReducer(initialState,
     on(addPost, (state, action) => {
         let post = { ...action.post };
-        // post.id = (state.post.length + 1).toString();
+        post.id = (state.post.length + 1).toString();
         return {
             ...state,
             post: [...state.post, post]

@@ -14,6 +14,7 @@ import { countReducer } from './count/states/count.reducer';
 import { HomeComponent } from './home/home.component';
 import { PostListComponent } from './post-list/post-list.component';
 import { appReducer } from './store/app.state';
+import { TodoComponent } from './todo/todo.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { appReducer } from './store/app.state';
     CounterInputComponent,
     HomeComponent,
     PostListComponent,
+    TodoComponent,
   ],
   imports: [
     BrowserModule,

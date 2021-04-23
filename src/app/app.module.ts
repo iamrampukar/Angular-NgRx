@@ -15,6 +15,8 @@ import { HomeComponent } from './home/home.component';
 import { PostListComponent } from './post-list/post-list.component';
 import { appReducer } from './store/app.state';
 import { TodoComponent } from './todo/todo.component';
+import { SharedModule } from './shared/shared.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { TodoComponent } from './todo/todo.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     ReactiveFormsModule,
+    SharedModule,
     NgxBootstrapModule,
     StoreModule.forRoot(appReducer)
     // StoreModule.forRoot({ counterX: counterReducer, counting: countReducer })
